@@ -1,1 +1,1 @@
-just a custom homepage for firefox which shows time and have a nice background image
+
