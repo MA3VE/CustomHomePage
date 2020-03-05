@@ -2,8 +2,13 @@
     text-align: center;
     align-items: center;
     position: absolute;
-    top:50%;
+    top:30%;
     left:50%;
     transform: translateX(-50%) translateY(-50%);
-
+    font-size: 150px;
+    color: #000000
+    
+}
+body{
+    background-image: url("https://source.unsplash.com/user/erondu/1600x900")
 }
