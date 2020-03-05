@@ -1,4 +1,4 @@
-// import './quotes.json'
+
 function showTime(){
     var date = new Date();
     var h = date.getHours();
@@ -12,18 +12,17 @@ showQuote();
 function showQuote(){
     var data;
     const Http = new XMLHttpRequest();
-    const url='http://quotes.rest/qod.json';
+    const url='https://gist.githubusercontent.com/natebass/b0a548425a73bdf8ea5c618149fe1fce/raw/f4231cd5961f026264bb6bb3a6c41671b044f1f4/quotes.json';
     Http.open("GET", url);
     Http.send();
 
     Http.onreadystatechange = (e) => {
-        data=JSON.parse(Http.responseText)
-        document.getElementById("Quote").textContent = data.contents.quotes[0].quote;
-        console.log(Http.responseText);
-    }
-    // quote="die u bitch";
-    document.getElementById("Quote").textContent = quote;
+        // data=JSON.parse(Http.responseText)
+        data=JSON.parse(Http.responseText);
+        document.getElementById("Quote").textContent = data[Math.floor((Math.random() * 100))].quote;
+        console.log(data[0].quote);
 
+    }
 
 }
 
